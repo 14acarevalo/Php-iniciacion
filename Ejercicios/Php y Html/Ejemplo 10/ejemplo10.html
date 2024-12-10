@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Caso práctico Unidad 03 Apartado 02</title>
+</head>
+<body>
+<h3>Validación datos usuario</h1>
+<body>
+
+<?php
+if(isset($_GET['mensaje'])) {
+    $mensaje=strip_tags($_GET['mensaje']);
+    echo "<h4>$mensaje</h4>";
+}
+?>
+
+<form action="ejemplo10.php" method="POST">
+Nombre: <input type="text" name="nombre"/><br />
+Apellidos: <input type="text" name="apellidos"/><br />
+Dirección: <input type="text" name="direccion"/><br />
+Población: <input type="text" name="poblacion"/><br />
+Género: Masculino <input type="radio" name="genero" value="masculino"/>
+Femenino <input type="radio" name="genero" value="femenino"/><br/>
+He leído y acepto las condiciones de la página web
+<input type="checkbox" name="acepto"/><br/>
+<input type="submit" value="Enviar">
+</form>
+</body>
+</html>
